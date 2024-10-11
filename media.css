@@ -1,0 +1,56 @@
+@media screen and (max-width:1200px) {
+    .results {
+        width: 100%;
+        margin: 0 auto;
+        float: center;
+    }
+    .calculator{
+        width:100% !important;
+    }
+    .calculation-container {
+        width: 100% !important; 
+    }
+    .about{
+        height:max-content;
+        padding-bottom: 50px;
+    }
+}
+@media (max-width: 950px) {
+    .hamburger-icon {
+        display: block !important;
+    }
+    aside {
+        display: none !important;
+    }
+
+    .main-content{
+        justify-content: center;
+        width:100% !important;
+        margin-left:-5px !important;
+        align-items: center;
+    }
+    .right li a {
+        display: none;
+    }
+
+    button {
+        zoom: 95%;
+    }
+    .content{
+        margin-left: -5px;
+    }
+}
+@media screen and (max-width:800px) {
+    .calculator-container{
+        width:100%;
+    }
+    .services{
+        display: grid;
+        width: 100%;
+        margin:0 auto;
+    }
+    .service{
+        width:100%;
+        display: block;
+    }
+}

@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+:root {
+    --background-color: #ea1064;
+    --overlay: #cd1e63;
+    --section-bg: #FFFFFF;
+    --section-div-bg: #e2e2e2;
+    --percentage-bg: #e81f6c;
+    --hover-background: #f1f1f1bf;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: .5s ease-in-out;
+    background: var(--background-color);
+    overflow: hidden;
+    overflow-y: visible;
+}
+
+
+.main-section {
+    margin: 50px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;
+}
+
+header {
+    float: left;
+    margin-right: auto;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.logo-container .logo {
+    color: var(--section-bg);
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.logo-container .logo .color-change {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+aside {
+    background: var(--section-bg);
+    padding: 20px 25px;
+    border-radius: 20px;
+    float: left;
+    height: 600px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+aside ul {
+    display: grid;
+    margin-left: -30px;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+aside ul li {
+    list-style: none;
+    padding: 10px 15px;
+    display: flex;
+    cursor: pointer;
+    text-align: left;
+    gap: 10px;
+}
+
+aside ul li svg {
+    size: 20px;
+    fill: black;
+}
+
+aside ul li:hover {
+    background: var(--hover-background);
+    border-radius: 10px;
+    color: var(--background-color);
+}
+
+aside ul li:hover svg {
+    fill: var(--background-color);
+}
+
+aside ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.home-loan {
+    color: var(--background-color);
+}
+
+.home-loan svg {
+    fill: var(--background-color);
+}
+
+.home-button a {
+    text-decoration: none;
+}
+.home-button{
+    float:bottom;
+    margin-bottom:0px;
+    margin-top:180px;
+}
+.home-button button {
+    float: bottom;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 0px;
+    text-align: left;
+    transition: .2s ease-in-out;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--background-color);
+    border: none;
+    gap: 10px;
+    color: var(--section-bg);
+    outline: none;
+}
+
+.home-button button:hover {
+    box-shadow: 2px 2px 20px var(--background-color);
+}
+.main-content{
+    border-radius:20px;
+    padding:20px 30px;
+    background:var(--section-bg);
+    width:65%;
+    float: left;
+    margin-left:50px;
+}
+.calculator h1{
+    color:var(--background-color);
+}
+.calculation-container{
+    float: left;
+    display:grid;
+    margin-right: auto;
+}
+.input-group{
+    padding:10px 5px;
+    display:grid;
+}
+input[type="range"] {
+    width: 100%;
+    margin:5px 0;
+    appearance: none;
+    height: 10px;
+    background: #ddd;
+    outline: none;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+    background: #ff0066;
+}
+.value{
+    margin:5px 0;
+    padding:2px 10px;
+    display: flex;
+    width:max-content;
+    border-radius: 10px;
+    background: var(--hover-background);
+}
+#calculateBtn{
+    border-radius: 10px;
+    padding:10px 20px;
+    background:var(--background-color);
+    color:var(--section-bg);
+    border:none;
+    outline:none;
+    cursor:pointer;
+    align-items: left;
+    display: flex;
+    width:max-content;
+}
+.results{
+    float:right;
+    margin:10px 20px;
+    border-radius: 10px;
+    height:550px;
+    display: grid;
+}
+.results hr{
+    width:90%;
+    height:0.1px;
+}
+.results p{
+    display: grid;
+    padding:10px 20px;
+    font-size:20px;
+    height:40px;
+    color:var(--background-color);
+}
+.results p span{
+    color:black;
+    font-size:18px;
+}
+
+/* Hamburger icon styling */
+.hamburger-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Mobile menu container */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -120%;
+    width: 50%;
+    height: 100%;
+    background-color:var(--section-bg);
+    padding: 20px;
+    transition: 0.5s ease;
+    z-index: 999;
+    box-shadow: -10px -10px 20px var(--section-div-bg);
+    border-radius: 0 0 0 20px;
+}
+
+/* Close button */
+.close-menu {
+    font-size: 30px;
+    cursor: pointer;
+    text-align: right;
+    display: flex;
+    float: left;
+    margin-right: auto;
+    margin-left: 5px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding: 5px 15px;
+    border-radius: 10px;background: var(--section-div-bg);
+    color: var(--text-color);
+}
+
+.close-menu:hover {
+    background: var(--background-color);
+    color: var(--section-bg);
+}
+
+/* Open mobile menu */
+.open-menu {
+    right: 0;
+}
+.mobile-menu ul{
+    display: grid;
+    gap: 30px;
+    margin-top: 40px;
+    float:left;
+    margin-left: -40px;
+    margin-right: auto;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    width:100% !important;
+}
+
+.mobile-menu ul li {
+    list-style: none;
+    padding: 10px 15px;
+    display: flex;
+    cursor: pointer;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    gap: 10px;
+    width: 100% !important;
+}
+
+.mobile-menu ul li svg {
+    size: 20px;
+    fill: black;
+}
+
+.mobile-menu ul li:hover {
+    color: var(--background-color);
+}
+.mobile-menu ul li:hover svg {
+    fill: var(--background-color);
+}
+
+.mobile-menu ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.home-loan {
+    color: var(--background-color);
+}
+
+.home-loan svg {
+    fill: var(--background-color);
+}
+
+.home-button a {
+    text-decoration: none;
+}
+.home-button{
+    float:bottom;
+    margin-bottom:0px;
+    margin-top:180px;
+}
+.home-button button {
+    float: bottom;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 0px;
+    text-align: left;
+    transition: .2s ease-in-out;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--background-color);
+    border: none;
+    gap: 10px;
+    color: var(--section-bg);
+    outline: none;
+}
+
+.home-button button:hover {
+    box-shadow: 2px 2px 20px var(--background-color);
+}
+.graph-container {
+    background: var(--section-bg);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin:0 auto;
+}
